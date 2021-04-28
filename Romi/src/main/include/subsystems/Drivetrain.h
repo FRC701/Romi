@@ -32,6 +32,8 @@ class Drivetrain : public frc2::SubsystemBase {
    * @param zaxisRotate the commanded rotation
    */
   void ArcadeDrive(double xaxisSpeed, double zaxisRotate);
+  void TankDrive(double left, double right);
+
 
   /**
    * Resets the drive encoders to currently read a position of 0.
