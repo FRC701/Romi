@@ -9,6 +9,7 @@
 #include <frc2/command/button/Button.h>
 
 #include "commands/TeleopArcadeDrive.h"
+#include "commands/TankDrive.h"
 
 RobotContainer::RobotContainer() {
   // Configure the button bindings
@@ -17,9 +18,9 @@ RobotContainer::RobotContainer() {
 
 void RobotContainer::ConfigureButtonBindings() {
   // Also set default commands here
-  m_drive.SetDefaultCommand(TeleopArcadeDrive(
+  m_drive.SetDefaultCommand(TankDrive(
       &m_drive, [this] { return -m_controller.GetRawAxis(1); },
-      [this] { return m_controller.GetRawAxis(2); }));
+      [this] { return -m_controller.GetRawAxis(5); }));
 
   // Example of how to use the onboard IO
   m_onboardButtonA.WhenPressed(frc2::PrintCommand("Button A Pressed"))
