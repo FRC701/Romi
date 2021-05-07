@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "C:\workspace2021\Romi",
+            "program": "C:\workspace21\Romi",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
